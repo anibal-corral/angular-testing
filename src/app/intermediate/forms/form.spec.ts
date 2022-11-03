@@ -1,4 +1,4 @@
-import { FormBuilder } from "@angular/forms";
+import { ControlContainer, FormBuilder } from "@angular/forms";
 import { LoginForm } from "./form"
 
 describe('Testing Forms',()=>{
@@ -10,6 +10,19 @@ beforeEach(()=>{
 expect(loginForm.form.contains('email')).toBeTruthy();
 expect(loginForm.form.contains('pwd')).toBeTruthy();
 
+
+    }),
+
+    it('Email should be required',()=>{
+        const emailControl = loginForm.form.get('email');
+        emailControl?.setValue('');
+        expect(emailControl?.valid).toBeFalsy();
+
+    })
+    it('Email should be valid email',()=>{
+        const emailControl = loginForm.form.get('email');
+        emailControl?.setValue('anastasia@gmail.com');
+        expect(emailControl?.valid).toBeTruthy();
 
     })
 
