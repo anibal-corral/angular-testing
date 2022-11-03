@@ -32,5 +32,15 @@ describe('MedicosComponent', () => {
    
     });
 
+    it('Should request to server to add a doctor',()=>{
+        const spy = spyOn(doctorService,'addDoctor').and.callFake(doctor=>{
+            return of();
+        })
+        doctorComponent.addDoctor();
+
+        expect(spy).toHaveBeenCalled();
+
+    })
+
 
 });
