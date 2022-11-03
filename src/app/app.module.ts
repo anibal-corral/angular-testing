@@ -3,11 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { DoctorComponent } from './intermediate2/doctor/doctor.component';
+import { HospitalComponent } from './intermediate2/hospital/hospital.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DoctorComponent
+    DoctorComponent,
+    HospitalComponent
   ],
   imports: [
     BrowserModule
