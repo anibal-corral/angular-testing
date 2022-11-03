@@ -1,6 +1,6 @@
 import { getCars } from './arrays';
 
-describe('Tesing arrays',()=>{
+xdescribe('Tesing arrays',()=>{
     it('Should return array of 2 cars',()=>{
     const resp = getCars();
 
