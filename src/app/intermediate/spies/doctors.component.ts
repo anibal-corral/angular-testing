@@ -26,8 +26,8 @@ export class DoctorsComponent implements OnInit {
 
     this._doctorService.addDoctor(doctor)
           .subscribe(
-            (            doctorDB: any) => this.doctors.push(doctorDB),
-            (            err: string) => this.msgError = err
+            (doctorDB: any) => this.doctors.push(doctorDB),
+            (err: string) => this.msgError = err
           );
   }
 
