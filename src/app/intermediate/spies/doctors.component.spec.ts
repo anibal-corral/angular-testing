@@ -67,5 +67,25 @@ describe('MedicosComponent', () => {
 
     });
 
+    it('Should call to service to delete a doctor', ()=>{
+
+        spyOn(window,'confirm').and.returnValue(true);
+
+        const spy = spyOn(doctorService,'deleteDoctor').and.returnValue(of());
+
+        doctorComponent.deleteDoctor("1");
+
+        expect(spy).toHaveBeenCalledWith('1')
+    })
+    it("Should'nt call to service to delete a doctor", ()=>{
+
+        spyOn(window,'confirm').and.returnValue(false);
+
+        const spy = spyOn(doctorService,'deleteDoctor').and.returnValue(of());
+
+        doctorComponent.deleteDoctor("1");
+
+        expect(spy).not.toHaveBeenCalledWith('1')
+    })
 
 });
