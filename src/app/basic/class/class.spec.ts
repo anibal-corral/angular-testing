@@ -27,4 +27,9 @@ describe('Testing class',()=>{
         const resp = player.hitted(50);
         expect(resp).toBe(50);
     })
+    it('Should return 0 hp if it is hitted with 10 or more of damage',()=>{
+        const player = new Player();
+        const resp = player.hitted(100);
+        expect(resp).toBe(0);
+    })
 })
