@@ -3,7 +3,7 @@ import { AppComponent } from './app.component';
 import { RouterTestingModule } from '@angular/router/testing';
 import { routes } from './advanced/routes/app.routes';
 import { By } from '@angular/platform-browser';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterLinkWithHref, RouterOutlet } from '@angular/router';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -42,6 +42,25 @@ it('Should have a router outlet',()=>{
 
   const debugElement = fixture.debugElement.query(By.directive(RouterOutlet));
   expect(debugElement).not.toBeNull();
+
+})
+it('Should have a router link to /path1',()=>{
+  const fixture = TestBed.createComponent(AppComponent);
+  fixture.detectChanges();
+
+  const debugElements = fixture.debugElement.queryAll(By.directive(RouterLinkWithHref));
+  // console.log(debugElements);
+
+  let exist=false;
+  for(const e of debugElements){
+    if(e.attributes['routerLink']==='/path1'){
+      exist =true;
+      break
+    }
+  }
+  expect(exist).toBeTruthy();
+
+
 
 })
 
