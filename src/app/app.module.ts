@@ -9,6 +9,7 @@ import { DoctorComponent } from './intermediate2/doctor/doctor.component';
 import { HospitalComponent } from './intermediate2/hospital/hospital.component';
 import { IncrementerComponent } from './intermediate2/incrementer/incrementer.component';
 import { NavbarComponent } from './advanced/navbar/navbar.component';
+import { DoctorRouterComponent } from './advanced/doctor-router/doctor-router.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { NavbarComponent } from './advanced/navbar/navbar.component';
     DoctorComponent,
     HospitalComponent,
     IncrementerComponent,
-    NavbarComponent
+    NavbarComponent,
+    DoctorRouterComponent
   ],
   imports: [
     BrowserModule,
