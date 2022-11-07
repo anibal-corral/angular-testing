@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { DoctorComponent } from './intermediate2/doctor/doctor.component';
 import { HospitalComponent } from './intermediate2/hospital/hospital.component';
 import { IncrementerComponent } from './intermediate2/incrementer/incrementer.component';
+import { NavbarComponent } from './advanced/navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DoctorComponent,
     HospitalComponent,
-    IncrementerComponent
+    IncrementerComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
